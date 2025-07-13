@@ -20,5 +20,6 @@ A simple web application that fetches and displays current weather conditions ba
 * **JavaScript (ES6+):** For all the dynamic functionality, including API calls, DOM manipulation, and event handling.
 * **OpenWeatherMap API:** Used to retrieve weather data.
 
+Author: Emmanuel Akalazu / Enetreal (Based on my GitHub username) Internship Program: Prodigy Infotech - July 2025
 
 
