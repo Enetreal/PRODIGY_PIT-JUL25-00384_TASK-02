@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    /* Warmer background - a light sandy or off-white */
+    background-color: #f8f0e3; /* Light beige */
+    /* Darker text for contrast */
+    color: #432818; /* Rich brown */
+}
+
+.weather-container {
+    background-color: #fff8e1; /* Light yellow/cream */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Slightly darker shadow */
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+}
+
+h1 {
+    /* A warmer blue or a vibrant orange */
+    color: #ff8f00; /* Vivid orange */
+    margin-bottom: 25px;
+}
+
+.search-section, .location-section {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between input and button */
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #d9d2b3; /* Light brown border */
+    border-radius: 5px;
+    font-size: 1em;
+    width: 70%;
+    max-width: 300px;
+}
+
+button {
+    padding: 12px 20px;
+    /* A nice blue that complements warmer tones */
+    background-color: #29abe2; /* Sky blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #008db3; /* Darker sky blue */
+}
+
+#currentLocationBtn {
+    /* A sunny green or a tropical teal */
+    background-color: #8bc34a; /* Light green */
+}
+
+#currentLocationBtn:hover {
+    background-color: #689f38; /* Darker green */
+}
+
+.weather-display {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 8px;
+    /* A very light, warm background */
+    background-color: #fffde7; /* Light yellow */
+    min-height: 100px; /* Ensure some height even when empty */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-display h2 {
+    margin-top: 0;
+    /* A darker shade of the heading color */
+    color: #e65100; /* Dark orange */
+}
+
+.weather-display p {
+    margin: 8px 0;
+    font-size: 1.1em;
+    color: #5e3c23; /* Medium brown */
+}
+
+.error-message {
+    /* A warmer shade of red */
+    color: #d32f2f; /* Darker red */
+    margin-top: 15px;
+    font-weight: bold;
+}
+
