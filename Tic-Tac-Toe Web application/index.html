@@ -8,7 +8,22 @@
 </head>
 <body>
   <h1>Tic-Tac-Toe</h1>
-  <div class="board" id="board">
+
+  <!-- Game Mode Selection -->
+  <div class="mode-select">
+    <label><input type="radio" name="mode" value="2-player" checked> 2 Player</label>
+    <label><input type="radio" name="mode" value="ai"> Vs AI</label>
+  </div>
+
+  <!-- Scoreboard -->
+  <div class="scoreboard">
+    <div>X: <span id="x-score">0</span></div>
+    <div>O: <span id="o-score">0</span></div>
+    <div>Draw: <span id="draw-score">0</span></div>
+  </div>
+
+  <!-- Game Board -->
+  <div id="board" class="board">
     <div class="cell" data-cell></div>
     <div class="cell" data-cell></div>
     <div class="cell" data-cell></div>
@@ -19,10 +34,18 @@
     <div class="cell" data-cell></div>
     <div class="cell" data-cell></div>
   </div>
-  <div class="winning-message" id="winningMessage">
+
+  <!-- Game Message -->
+  <div id="winningMessage" class="message">
     <p id="messageText"></p>
     <button onclick="startGame()">Restart</button>
   </div>
+
+  <!-- Sounds -->
+  <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+  <audio id="win-sound" src="win.mp3" preload="auto"></audio>
+  <audio id="draw-sound" src="draw.mp3" preload="auto"></audio>
+
   <script src="script.js"></script>
 </body>
 </html>
