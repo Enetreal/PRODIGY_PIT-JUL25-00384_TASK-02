@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home">
+        <h1>Creative Web Developer</h1>
+        <img src="my photo.jpg" alt="Professional Photo" class="profile-photo">
+        <p class="summary">I am a skilled web developer specialized in creating dynamic, user-friendly web applications. I combine strong frontend skills with backend expertise to deliver seamless digital experiences. I thrive in agile teams and enjoy solving real-world problems through clean, maintainable code.</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I have a strong background in web development with a degree in Computer Science. Over the past 3 years, I have worked on various projects, including e-commerce sites and personal blogs, enhancing my skills in front-end and back-end development.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>E-Commerce Platform</h3>
+            <p>Built a fully responsive e-commerce website using React for the frontend and Node.js with Express for the backend. Integrated Stripe for secure payments and implemented a shopping cart with real-time updates.</p>
+            <a href="#">View Project</a>
+        </div>
+        <div class="project">
+            <h3>Personal Blog</h3>
+            <p>Developed a blog platform with a custom CMS using Django and PostgreSQL. Features include user authentication, post categorization, and a responsive design optimized for mobile and desktop.</p>
+            <a href="#">View Project</a>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Python</li>
+            <li>Git</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Contact: <a href="mailto:flexzoglobtech@outlook.com">flexzoglobtech@outlook.com</a></p>
+        <p>© Emmanuel Akalazu 2025. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to toggle hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.7;
+    color: #111827; /* Near-black for high-contrast text */
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9fafb; /* Clean off-white background */
+}
+
+/* Navigation bar */
+nav {
+    background-color: #1f2937; /* Dark slate for elegant nav */
+    padding: 0.75rem 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li {
+    margin: 0 1rem;
+}
+
+.nav-menu li a {
+    color: #f9fafb; /* Off-white for nav links */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover, .nav-menu li a.active {
+    color: #2dd4bf; /* Vibrant teal for hover/active */
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #f9fafb; /* Off-white for hamburger icon */
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Responsive design for nav */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1f2937; /* Match nav background */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-menu li a {
+        font-size: 1rem;
+        padding: 0.5rem;
+        display: block;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    background-color: #ffffff; /* White background for header */
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1e3a8a; /* Navy blue for main header */
+}
+
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 1.5rem 0;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.summary {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #4b5563; /* Muted gray for summary text */
+}
+
+/* Sections */
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #ffffff; /* White background for sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #1e3a8a; /* Navy blue for section headers */
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    width: 50%;
+    height: 3px;
+    background-color: #2dd4bf; /* Teal underline for headers */
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1e3a8a; /* Navy blue for subheaders */
+}
+
+/* Projects */
+.project {
+    background-color: #e2e8f0; /* Soft gray-blue for project cards */
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project p {
+    margin-bottom: 0.75rem;
+    color: #4b5563; /* Muted gray for project text */
+}
+
+.project a {
+    color: #2dd4bf; /* Teal for project links */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Skills */
+section#skills ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-left: 0;
+}
+
+section#skills li {
+    background-color: #e2e8f0; /* Soft gray-blue for skill tags */
+    padding: 0.75rem 1rem;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 500;
+    color: #111827; /* Near-black for skill text */
+    transition: background-color 0.3s ease;
+}
+
+section#skills li:hover {
+    background-color: #2dd4bf; /* Teal on hover */
+    color: #ffffff;
+}
+
+/* Contact form */
+form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #1e3a8a; /* Navy blue for labels */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #d1d5db; /* Light gray border */
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #2dd4bf; /* Teal focus border */
+    box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
+}
+
+form button {
+    background-color: #2dd4bf; /* Teal for button */
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #14b8a6; /* Darker teal on hover */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #1f2937; /* Dark slate for footer */
+    color: #f9fafb; /* Off-white text */
+    margin-top: 3rem;
+    border-radius: 8px;
+}
+
+footer p {
+    margin-bottom: 0.75rem;
+}
+
+footer a {
+    color: #2dd4bf; /* Teal for footer links */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    section h2 {
+        font-size: 1.4rem;
+    }
+
+    form input, form textarea {
+        font-size: 0.9rem;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
